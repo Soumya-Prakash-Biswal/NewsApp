@@ -76,7 +76,7 @@ export class News extends Component {
 
     return (
       <div className='container my-4  '>
-        <h2 className='text-center my-5'  >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} Headlines</h2>
+        <h2 className='text-center my-5' style={{color:(this.props.mode)==='dark'?'white':'black'}} >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} Headlines</h2>
         {/* <i>total results Obtained - {this.state.totalResults} , pageNo . {this.state.page}</i> */}
         {/* {this.state.loading && <Spinner />} */}
         <InfiniteScroll
@@ -84,13 +84,13 @@ export class News extends Component {
           next={this.fetchMoreData}
           hasMore={this.state.articles.length<this.state.totalResults}
           loader={<Spinner/>}
-           
         >
         <div className="row" style={{margin:'10px 45px'}}>
           {this.state.articles.map((element) => {
             return <div className="col-md-4 my-2 " key={element.url}>
               <NewsItem
                 title={element.title ? element.title : ""}
+                mode={this.props.mode}
                 description={element.description ? element.description : ""}
                 src={element.urlToImage ? element.urlToImage : "https://www.shutterstock.com/shutterstock/photos/1928997539/display_1500/stock-vector-breaking-news-template-with-d-red-and-blue-badge-breaking-news-text-on-dark-blue-with-earth-and-1928997539.jpg"}
                 newsUrl={element.url}
