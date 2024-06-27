@@ -73,7 +73,7 @@ export class News extends Component {
 
     return (
       <div className='container my-4  '>
-        <h2 className='text-center my-5'  >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} headlines</h2>
+        <h2 className='text-center my-5'  >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} Headlines</h2>
         {/* <i>total results Obtained - {this.state.totalResults} , pageNo . {this.state.page}</i> */}
         {/* {this.state.loading && <Spinner />} */}
         <InfiniteScroll
