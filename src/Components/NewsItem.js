@@ -12,8 +12,8 @@ export class NewsItem extends Component {
           </span>
           <img src={src} className="card-img-top" alt="..." />
           <div className="card-body">
-            <h5 className="card-title">{title}...</h5>
-            <p className="card-text">{description}...</p>
+            <h5 className="card-title">{title.slice(0,50)}...</h5>
+            <p className="card-text">{description.slice(0,88)}...</p>
             <p className="card-text"><small className="text-body-secondary">By {author} at {new Date(publishedDate).toUTCString()}</small></p>
             <a href={newsUrl} target="_blank" rel="noreferrer" className='btn btn-primary btn-sm'> Read More</a>
           </div>
