@@ -53,7 +53,7 @@ export class App extends Component {
         <BrowserRouter>
           <Navbar toggleMode={this.toggleMode}  mode={this.state.mode} />
           <LoadingBar
-            color='#3281a8'
+            color={this.state.mode==='dark'?'white':'red'}
             progress={this.state.progress}
             onLoaderFinished={() => this.setProgress(0)}
           />

@@ -76,7 +76,7 @@ export class News extends Component {
 
     return (
       <div className='container my-4  '>
-        <h2 className='text-center my-5' style={{color:(this.props.mode)==='dark'?'white':'black'}} >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} Headlines</h2>
+        <h2 className='text-center ' style={{color:(this.props.mode)==='dark'?'white':'black',margin:"90px auto 18px"}} >NewsApp-Top {this.capitalizeFirstChar(this.props.category)} Headlines</h2>
         {/* <i>total results Obtained - {this.state.totalResults} , pageNo . {this.state.page}</i> */}
         {/* {this.state.loading && <Spinner />} */}
         <InfiniteScroll
